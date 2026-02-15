@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load member_extras %}
+
+{% block content %}
+<h2>Member Rankings</h2>
+
+<ol>
+    {% for member in members %}
+        <li>
+            {{ member.name }} — {{ member.total_points|highlight_score }}
+        </li>
+    {% empty %}
+        <li>No rankings available.</li>
+    {% endfor %}
+</ol>
+{% endblock %}

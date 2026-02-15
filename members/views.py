@@ -47,3 +47,7 @@ def member_delete(request, pk):
         return redirect('member_list')
 
     return render(request, 'members/member_confirm_delete.html', {'member': member})
+
+def ranking(request):
+    members = Member.objects.order_by('-total_points')
+    return render(request, 'members/ranking.html', {'members': members})

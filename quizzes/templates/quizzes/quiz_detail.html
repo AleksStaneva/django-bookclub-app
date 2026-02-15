@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>{{ quiz.title }}</h2>
+
+<form method="post">
+    {% csrf_token %}
+
+    <label>Select member:</label>
+    <select name="member" class="form-select mb-3">
+        {% for member in members %}
+            <option value="{{ member.id }}">{{ member.name }}</option>
+        {% endfor %}
+    </select>
+
+    {{ form.as_p }}
+
+    <button type="submit" class="btn btn-success">Submit Score</button>
+</form>
+{% endblock %}
