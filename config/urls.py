@@ -10,3 +10,5 @@ urlpatterns = [
     path('books/', include('books.urls')),
     path('members/', include('members.urls')),
 ]
+
+path('quizzes/', include('quizzes.urls')),
