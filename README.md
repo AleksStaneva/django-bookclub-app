@@ -8,7 +8,6 @@ Technologies Used
 - Python 3
 - Django
 - PostgreSQL
-- Bootstrap 5
 - HTML (Django Template Engine)
 
 Application Structure
