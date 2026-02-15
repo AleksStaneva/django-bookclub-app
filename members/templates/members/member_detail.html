@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>{{ member.name }}</h2>
+
+<p><strong>Email:</strong> {{ member.email }}</p>
+<p><strong>Joined:</strong> {{ member.join_date }}</p>
+<p><strong>Total points:</strong> {{ member.total_points }}</p>
+
+<a href="/members/{{ member.id }}/edit/" class="btn btn-warning">Edit</a>
+<a href="/members/{{ member.id }}/delete/" class="btn btn-danger">Delete</a>
+{% endblock %}

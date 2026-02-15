@@ -11,7 +11,7 @@ class MemberForm(forms.ModelForm):
             'email': 'Email Address',
         }
         help_texts = {
-            'email': 'We will never share this email.',
+            'email': 'Please enter a valid email address.',
         }
 
     def __init__(self, *args, **kwargs):
